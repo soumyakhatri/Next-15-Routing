@@ -28,6 +28,8 @@ export default function RootLayout({
               <Link className="hover:text-slate-300 transition-colors" href="/_lib">%5flib</Link>
               <Link className="hover:text-slate-300 transition-colors" href="/docs">Docs</Link>
               <Link className="hover:text-slate-300 transition-colors" href="/login">Login</Link>
+              <Link className="hover:text-slate-300 transition-colors" href="/articles">Articles Server Component</Link>
+              <Link className="hover:text-slate-300 transition-colors" href="/articles-client-comp">Articles Client Component</Link>
             </nav>
           </div>
         </header>
