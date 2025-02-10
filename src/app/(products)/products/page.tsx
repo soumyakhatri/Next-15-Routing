@@ -18,6 +18,9 @@ export default function ProductsPage() {
                 <Link href="/products/3" replace className="p-4 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
                     Product Three
                 </Link>
+                <Link href="/products/1001" replace className="p-4 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
+                    Product One Thousand One
+                </Link>
             </div>
         </div>
     )
