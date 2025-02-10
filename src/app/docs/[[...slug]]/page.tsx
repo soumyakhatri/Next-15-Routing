@@ -19,6 +19,10 @@ export default async function Docs({ params }: { params: Promise<{ slug: string[
         return <h1>{notFound()}</h1>
     } else {
         // [[...slug]] : the extra square bracket is for optional catch all routes.
-        return <h1>Showing Docs</h1>
+        return (
+            <>  <h1>Catch All Routes</h1>
+                <h1>Showing Docs</h1>
+            </>
+        )
     }
 }
