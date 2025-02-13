@@ -23,7 +23,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
                 {
                     navLinks.map(link => {
                         const isActive = pathname === link.href || (pathname.startsWith(link.href) && pathname !== "/")
-                        return <Link href={link.href} className={isActive ? "mr-4 font-bold" : "mr-4 text-blue-500"}>{link.name}</Link>
+                        return <Link href={link.href} className={isActive ? "mr-4 font-bold" : "mr-4 text-blue-500"} key={link.name}>{link.name}</Link>
                     })
                 }
             </header>

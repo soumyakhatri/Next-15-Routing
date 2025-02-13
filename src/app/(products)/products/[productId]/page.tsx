@@ -2,9 +2,10 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { redirect } from "next/navigation"
 
-type Props = { 
-    params: Promise<{ productId: string }> 
+type Props = {
+    params: Promise<{ productId: string }>
 }
+
 
 export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
     const { productId } = await params
@@ -23,7 +24,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
 export default async function ProductDetails({ params }: { params: Promise<{ productId: string }> }) {
     const { productId } = await params;
 
-    if(parseInt(productId) > 1000){
+    if (parseInt(productId) > 1000) {
         redirect("/products")
     }
     return (
@@ -31,7 +32,7 @@ export default async function ProductDetails({ params }: { params: Promise<{ pro
             <h1 className="text-3xl font-bold mb-6">
                 Details about product {productId}
             </h1>
-            <Link 
+            <Link
                 href="/place-order"
                 className="inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
             >

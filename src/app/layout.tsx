@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import ErrorWrapper from "./error-wrapper";
 
 export const metadata: Metadata = {
   title: {
@@ -18,29 +19,32 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
-        <header className="bg-slate-800 text-white p-4">
-          <div className="container mx-auto">
-            <h1 className="text-2xl font-bold mb-4">Root Header</h1>
-            <nav className="space-x-4">
-              <Link className="hover:text-slate-300 transition-colors" href="/">Home</Link>
-              <Link className="hover:text-slate-300 transition-colors" href="/about">About</Link>
-              <Link className="hover:text-slate-300 transition-colors" href="/products">Products</Link>
-              <Link className="hover:text-slate-300 transition-colors" href="/_lib">%5flib</Link>
-              <Link className="hover:text-slate-300 transition-colors" href="/docs">Docs</Link>
-              <Link className="hover:text-slate-300 transition-colors" href="/login">Login</Link>
-              <Link className="hover:text-slate-300 transition-colors" href="/articles">Articles Server Component</Link>
-              <Link className="hover:text-slate-300 transition-colors" href="/articles-client-comp">Articles Client Component</Link>
-            </nav>
-          </div>
-        </header>
-        <main className="flex-grow container mx-auto p-4">
-          {children}
-        </main>
-        <footer className="bg-slate-800 text-white p-4">
-          <div className="container mx-auto">
-            Root Footer
-          </div>
-        </footer>
+        <ErrorWrapper>
+          <header className="bg-slate-800 text-white p-4">
+            <div className="container mx-auto">
+              <h1 className="text-2xl font-bold mb-4">Root Header</h1>
+              <nav className="space-x-4">
+                <Link className="hover:text-slate-300 transition-colors" href="/">Home</Link>
+                <Link className="hover:text-slate-300 transition-colors" href="/about">About</Link>
+                <Link className="hover:text-slate-300 transition-colors" href="/products">Products</Link>
+                <Link className="hover:text-slate-300 transition-colors" href="/_lib">%5flib</Link>
+                <Link className="hover:text-slate-300 transition-colors" href="/docs">Docs</Link>
+                <Link className="hover:text-slate-300 transition-colors" href="/login">Login</Link>
+                <Link className="hover:text-slate-300 transition-colors" href="/articles">Articles Server Component</Link>
+                <Link className="hover:text-slate-300 transition-colors" href="/articles-client-comp">Articles Client Component</Link>
+                <Link className="hover:text-slate-300 transition-colors" href="/blogs">Blogs</Link>
+              </nav>
+            </div>
+          </header>
+          <main className="flex-grow container mx-auto p-4">
+            {children}
+          </main>
+          <footer className="bg-slate-800 text-white p-4">
+            <div className="container mx-auto">
+              Root Footer
+            </div>
+          </footer>
+        </ErrorWrapper>
       </body>
     </html>
   );
