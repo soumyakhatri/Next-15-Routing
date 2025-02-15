@@ -33,6 +33,9 @@ export default function RootLayout({
                 <Link className="hover:text-slate-300 transition-colors" href="/articles">Articles Server Component</Link>
                 <Link className="hover:text-slate-300 transition-colors" href="/articles-client-comp">Articles Client Component</Link>
                 <Link className="hover:text-slate-300 transition-colors" href="/blogs">Blogs</Link>
+                <Link className="hover:text-slate-300 transition-colors" href="/complex-dashboard">Complex Dashboard</Link>
+                <Link className="hover:text-slate-300 transition-colors" href="/photos-feed">Photos Feed</Link>
+                <Link className="hover:text-slate-300 transition-colors" href="/f1">F1</Link>
               </nav>
             </div>
           </header>

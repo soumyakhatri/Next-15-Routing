@@ -1,0 +1,23 @@
+.users-container {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.user-link {
+    text-decoration: none;
+    color: #0070f3;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: 1px solid #0070f3;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.user-link:hover {
+    background-color: #0070f3;
+    color: white;
+} 
